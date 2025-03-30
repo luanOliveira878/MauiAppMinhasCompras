@@ -18,9 +18,10 @@ public partial class NovoProduto : ContentPage
 			Produto p = new Produto
 			{
 				Descricao = txt_descricao.Text,
-				Quantidade = Convert.ToDouble(txt_quantidade.Text),
-				Preco = Convert.ToDouble(txt_preco.Text)
-			};
+                Quantidade = Convert.ToDouble(txt_quantidade.Text),
+				Preco = Convert.ToDouble(txt_preco.Text),
+                Data = Convert.ToDateTime(txt_data.Text)
+            };
 			// realizando de forma assíncrona o método insert na Db
 			await App.Db.Insert(p);
 			//Avisando o usuário que o registro foi inserido

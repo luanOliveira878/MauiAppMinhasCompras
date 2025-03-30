@@ -148,5 +148,19 @@ public partial class ListaProduto : ContentPage
 			lst_produtos.IsRefreshing = false;
 		}
     }
+
+    private void ToolbarItem_Clicked_2(object sender, EventArgs e)
+    {
+        try
+        {
+            Navigation.PushAsync(new Views.ListaProdutoPorPeriodo());
+
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Ops", ex.Message, "OK");
+        }
+
+    }
 }
 

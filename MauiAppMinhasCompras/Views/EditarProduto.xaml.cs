@@ -4,7 +4,8 @@ namespace MauiAppMinhasCompras.Views;
 
 public partial class EditarProduto : ContentPage
 {
-	public EditarProduto()
+
+    public EditarProduto()
 	{
         InitializeComponent();
 	}
@@ -18,9 +19,10 @@ public partial class EditarProduto : ContentPage
             Produto p = new Produto
             {
                 Id = produto_anexado.Id,
-                Descricao = txt_descricao.Text,
+                Descricao = txt_descricao.Text,               
                 Quantidade = Convert.ToDouble(txt_quantidade.Text),
-                Preco = Convert.ToDouble(txt_preco.Text)
+                Preco = Convert.ToDouble(txt_preco.Text),
+                Data = Convert.ToDateTime(txt_data.Text)
             };
            
             await App.Db.Update(p);

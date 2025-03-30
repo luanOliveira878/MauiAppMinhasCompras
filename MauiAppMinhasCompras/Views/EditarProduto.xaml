@@ -19,6 +19,10 @@
 
             <Label Text="Preço Unitário: " />
             <Entry x:Name="txt_preco" Keyboard="Numeric" Text="{Binding Preco}" />
-        </VerticalStackLayout>
+
+            <Label Text="Data da Compra: " />
+            <Entry x:Name="txt_data" Text="{Binding Data}" />
+
+    </VerticalStackLayout>
         
 </ContentPage>
